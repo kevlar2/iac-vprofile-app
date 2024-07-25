@@ -27,7 +27,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = data.aws_ssm_parameter.state_bucket_name.value
+    bucket = "vprofileactions-ko-23"
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
