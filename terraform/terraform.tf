@@ -27,12 +27,13 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "vprofileactions-ko-23"
+    bucket = data.aws_ssm_parameter.state_bucket_name.value 
     key    = "terraform.tfstate"
     region = "us-east-1"
   }
 
   required_version = "~> 1.6.3"
 }
+##
 ##
 ##
