@@ -13,4 +13,7 @@ locals {
   cluster_name = var.clusterName
 }
 
-##
+data "aws_ssm_parameter" "state_bucket_name" {
+  name = "/myterraform/s3bucket/name"
+}
+###
